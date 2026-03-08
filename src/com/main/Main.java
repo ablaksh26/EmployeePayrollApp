@@ -15,7 +15,7 @@ import com.validation.Validator;
 /*
  * 
  * @author: Abhilaksh
- * @version: 3.0
+ * @version: 4.0
  * 
  * */
 
@@ -25,29 +25,12 @@ public class Main {
 		System.out.println("=============Pay Roll App=============");
 		
 		Scanner sc = new Scanner(System.in);
-		
-//		try {
-//			System.out.print("Enter your Name: ");
-//			String name = sc.nextLine();
-//			System.out.print("Enter your UserName: ");
-//			String userName = sc.nextLine();
-//			System.out.print("Enter your Password: ");
-//			String pass = sc.nextLine();
-//			System.out.print("Enter your Email: ");
-//			String email = sc.nextLine();
-//			Validator.isValidEmail(email);
-//			System.out.print("Enter your PhoneNumber: ");
-//			String phoneNumber = sc.nextLine();
-//			Validator.isValidPhoneNumber(phoneNumber);
-//			System.out.print("Enter your EmpID: ");
-//			String empID = sc.nextLine();
-//			Validator.isValidEmpId(empID);
+					
+			User user = new User("John","John123","regular");
+			Employee emp = new Employee("John","john@gmail.com","9786989898","john5657");
 			
-			User user = new User("David12","David123","regular");
-			Employee emp = new Employee("David","David@gmail.com","9898989898","davi121");
-			
-			User user2 = new User("Soe12","Soe321","manager");
-			Employee emp2 = new Employee("soe","soe@gmail.com","9898989877","soe2122");
+			User user2 = new User("Rock42","Rock422","manager");
+			Employee emp2 = new Employee("Rock","rock@gmail.com","7896789877","rock8787");
 			
 			EmployeeData.userMap.put(user.getUserName(), user);
 			EmployeeData.empMap.put(emp.getEmpId(), emp);
@@ -69,11 +52,8 @@ public class Main {
 			
 			System.out.print(slip.toString());
 			
-			
-//		}
-//		catch(ValidationException e) {
-//			System.out.println(e.getMessage());
-//		}
+			slip.savePayslipToFile();
+
 
 	}
 
