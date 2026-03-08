@@ -1,13 +1,15 @@
 package com.employee;
 
+import com.auth.HashPassword;
+
 public class User {
 	private String userName;
-	private String password;
+	private String pass;
 	private String role;
 	
-	public User(String userName,String password,String role) {
+	public User(String userName,String pass,String role) {
 		this.userName = userName;
-		this.password = password;
+		this.pass = HashPassword.hashPassword(pass);
 		this.role = role;
 	}
 
@@ -20,14 +22,19 @@ public class User {
 	}
 
 	public String getPass() {
-		return password;
+		return pass;
 	}
-	
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
 	public String getRole() {
 		return role;
 	}
-	
-	public void setPass(String password) {
-		this.password = password;
+
+	public void setRole(String role) {
+		this.role = role;
 	}
+	
 }
