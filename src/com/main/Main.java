@@ -16,7 +16,7 @@ import com.validation.Validator;
 /*
  * 
  * @author: Abhilaksh
- * @version: 5.0
+ * @version: 6.0
  * 
  * */
 
@@ -24,18 +24,19 @@ import com.validation.Validator;
 
 public class Main {
 
-	public static void main(String[] args) {
-		System.out.println("=============Pay Roll App=============");
+	public static void main(String[] args) throws ValidationException {
 		
-		Scanner sc = new Scanner(System.in);
+			System.out.println("=============Pay Roll App=============");
+		
+			Scanner sc = new Scanner(System.in);
 			
 
 
-User user = new User("John","John123","regular");
-Employee emp = new Employee("John","john@gmail.com","9786989898","john5657");
+			User user = new User("John","John123","regular");
+			Employee emp = new Employee("John","john@gmail.com","9786989898","john5657");
 
-User user2 = new User("Rock42","Rock422","manager");
-Employee emp2 = new Employee("Rock","rock@gmail.com","7896789877","rock8787");
+			User user2 = new User("Rock42","Rock422","manager");
+			Employee emp2 = new Employee("Rock","rock@gmail.com","7896789877","rock8787");
 			
 			EmployeeData.userMap.put(user.getUserName(), user);
 			EmployeeData.empMap.put(emp.getEmpId(), emp);
@@ -62,7 +63,7 @@ Employee emp2 = new Employee("Rock","rock@gmail.com","7896789877","rock8787");
 				System.out.print(item.month + " --> " + item.value);
 				System.out.println();
 			}
-			
+
 			
 	}
 
